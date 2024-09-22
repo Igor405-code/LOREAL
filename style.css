@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
 }
 @media (max-width: 630px) {
   header {
@@ -24,6 +24,7 @@ header div {
   display: flex;
   justify-content: space-between;
   height: 7vh;
+  top: 0;
 }
 @media (max-width: 630px) {
   header div {
@@ -38,8 +39,8 @@ header div nav {
 }
 header div ul {
   display: flex;
-  width: 100%;
   justify-content: space-around;
+  width: 100%;
   padding: 0 20px;
   list-style: none;
 }
@@ -55,8 +56,8 @@ header div li {
 }
 
 .logo {
-  width: 140px;
-  height: 48px;
+  width: 150px;
+  height: 80%;
 }
 
 .imagem-de-fundo {
@@ -72,7 +73,6 @@ header div li {
 .sessaoGloss {
   display: flex;
   justify-content: center;
-  margin-bottom: 90px;
 }
 @media (max-width: 630px) {
   .sessaoGloss {
@@ -84,14 +84,8 @@ header div li {
 
 .gloss {
   margin: 10vh 10vw;
-  width: 70vw;
-  height: 35vh;
-}
-@media (max-width: 630px) {
-  .gloss {
-    width: 300px;
-    height: 200px;
-  }
+  width: 80vw;
+  height: 40vh;
 }
 
 .caixaGloss {
@@ -128,17 +122,15 @@ p {
   .sessaoProdutos {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     font-size: 0.8em;
     text-align: center;
-    align-items: center;
+    justify-content: center;
   }
 }
 
 .favoritos {
   width: 50vw;
   text-align: inherit;
-  margin: 5% 5%;
 }
 .favoritos h2 {
   width: 100%;
@@ -150,8 +142,14 @@ p {
   justify-content: space-between;
   width: 50vw;
   height: 20vh;
-  margin-top: 50px;
+  margin-top: 20px;
   flex-wrap: wrap;
+}
+@media (max-width: 630px) {
+  .produtos {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .produto {

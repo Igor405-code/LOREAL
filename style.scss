@@ -1,171 +1,161 @@
+@mixin flexbox {
+  display: flex;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Kodchasan", sans-serif;
-    background: rgba(239, 238, 243, 1);
-    color:  rgba(0, 0, 0, 1);
-  }
-  
-  header {
-    width: 100%;
-
-    @media(max-width:630px){
-        display: flex;
-        flex-direction: column;
-        height: 50vh;
-    };    
-    
-  
-    
-    div {
-      display: flex;
-      justify-content: space-between;
-      height: 7vh;
-
-      @media(max-width:630px){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    };     
-      nav {
-        display: flex;
-        justify-content: center; 
-      }
-  
-      ul {
-        display: flex;
-        width: 100%;
-        justify-content: space-around; 
-        padding: 0 20px; 
-        list-style: none;
-
-        @media(max-width: 630px){
-            display: flex;
-            flex-direction: column;
-        }
-        
-      }
-  
-      li {
-        padding: 2vh 1vw;
-        text-align: center;
-      }
-    }
-  }
- .logo{
-    width: 140px;
-    height: 48px
-
-   
- }
-  
-  .imagem-de-fundo {
-    width: 100%;
-    height: 30vh;
-
-    @media(max-width:630px){
-        display: none;
-    };
-  }
-  
-  .sessaoGloss{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 90px;
-
-    @media(max-width:630px){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-  }
-
-  .gloss{
-    margin: 10vh 10vw;
-    width: 70vw;
-    height: 35vh;
-
-    @media(max-width: 630px){
-        width: 300px;
-        height: 200px;
-    }
-  }
-
-  .caixaGloss{
-    
-    margin: 10vh 10vw;
-    text-align: center;
-
-    @media(max-width: 630px){
-        
-    }
-  }
-
- h1{
-    font-size: 2em;
-
-    @media(max-width: 630px){
-        font-size: 1.5em;
-    }
- }
-  p{
-      margin-top: 30px;
-      font-size: 1.3em;
-
-      @media(max-width: 630px){
-        font-size: 1em;
-        text-align: center;
-        width: 78vw;
-    }
-  }
-
-  .sessaoProdutos{
-    display: flex;
-    align-items: center;
-    margin-bottom: 5vh;
-    
-    @media(max-width: 630px){
-        display: flex;
-        flex-direction: column;
-        margin-top: 50px;
-        font-size: 0.8em;
-        text-align: center;
-        align-items: center;
-    }
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.favoritos{
-    width: 50vw;
-    text-align: inherit;
-    margin: 5% 5%;
-   
-    
-    h2{
-        width: 100%;
-        flex-wrap: wrap;
-    }
+body {
+  font-family: "Kodchasan", sans-serif;
+  background: rgba(239, 238, 243, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
-.produtos{
-    display: flex;
+header {
+  width: 100vw;
+
+  @media (max-width: 630px) {
+    @include flexbox;
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  div {
+    @include flexbox;
     justify-content: space-between;
-    width: 50vw;
-    height: 20vh;
-    margin-top: 50px;
-    
+    height: 7vh;
+    top: 0;
+
+    @media (max-width: 630px) {
+      @include flexbox;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      @include flexbox;
+      justify-content: center;
+    }
+
+    ul {
+      @include flexbox;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0 20px;
+      list-style: none;
+
+      @media (max-width: 630px) {
+        @include flexbox;
+        flex-direction: column;
+      }
+    }
+
+    li {
+      padding: 2vh 1vw;
+      text-align: center;
+    }
+  }
+}
+
+.logo {
+  width: 150px;
+  height: 80%;
+}
+
+.imagem-de-fundo {
+  width: 100%;
+  height: 30vh;
+
+  @media (max-width: 630px) {
+    display: none;
+  }
+}
+
+.sessaoGloss {
+  @include flexbox;
+  justify-content: center;
+
+  @media (max-width: 630px) {
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gloss {
+  margin: 10vh 10vw;
+  width: 80vw;
+  height: 40vh;
+}
+
+.caixaGloss {
+  margin: 10vh 10vw;
+  text-align: center;
+
+  @media (max-width: 630px) {
+  }
+}
+
+h1 {
+  font-size: 2em;
+
+  @media (max-width: 630px) {
+    font-size: 1.5em;
+  }
+}
+
+p {
+  margin-top: 30px;
+  font-size: 1.3em;
+
+  @media (max-width: 630px) {
+    font-size: 1em;
+    text-align: center;
+    width: 78vw;
+  }
+}
+
+.sessaoProdutos {
+  @include flexbox;
+  align-items: center;
+  margin-bottom: 5vh;
+
+  @media (max-width: 630px) {
+    @include flexbox;
+    flex-direction: column;
+    font-size: 0.8em;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.favoritos {
+  width: 50vw;
+  text-align: inherit;
+
+  h2 {
+    width: 100%;
     flex-wrap: wrap;
+  }
 }
 
-.produto{
-    margin: 20px; 
+.produtos {
+  @include flexbox;
+  justify-content: space-between;
+  width: 50vw;
+  height: 20vh;
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 630px) {
+    @include flexbox;
+    justify-content: center;
+  }
 }
 
-
-
+.produto {
+  margin: 20px;
+}
