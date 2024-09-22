@@ -51,13 +51,14 @@ header div ul {
   }
 }
 header div li {
+  font-size: 1.3em;
   padding: 2vh 1vw;
   text-align: center;
 }
 
 .logo {
   width: 150px;
-  height: 80%;
+  height: 90%;
 }
 
 .imagem-de-fundo {
@@ -84,14 +85,21 @@ header div li {
 
 .gloss {
   margin: 10vh 10vw;
-  width: 80vw;
-  height: 40vh;
+  width: 90%;
+  height: 40%;
+}
+@media (max-width: 630px) {
+  .gloss {
+    margin: 0px;
+  }
 }
 
 .caixaGloss {
-  margin: 10vh 10vw;
+  width: 80vw;
+  margin: 10vh;
   text-align: center;
 }
+
 h1 {
   font-size: 2em;
 }
@@ -140,7 +148,7 @@ p {
 .produtos {
   display: flex;
   justify-content: space-between;
-  width: 50vw;
+  width: 100%;
   height: 20vh;
   margin-top: 20px;
   flex-wrap: wrap;
@@ -153,5 +161,5 @@ p {
 }
 
 .produto {
-  margin: 20px;
+  padding: 50px;
 }/*# sourceMappingURL=style.css.map */
